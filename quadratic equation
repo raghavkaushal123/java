@@ -8,7 +8,7 @@ class Coeff {
 
 class PrintInfo {
     static void print() {
-        System.out.println("Name: Raghav kaushal");
+        System.out.println("Name: raghav kaushal");
         System.out.println("USN: 1BM23CS257");
     }
 }
@@ -16,13 +16,10 @@ class PrintInfo {
 public class QuadraticEquation {
     public static void main(String[] args) {
         PrintInfo.print();
-
         Scanner scanner = new Scanner(System.in);
         Coeff coeff = new Coeff();
-
-        System.out.println("Enter the coefficients of a, b, and c:");
         
-        // Input coefficient a
+        System.out.println("Enter the coefficients of a, b, c:");
         System.out.print("Enter coefficient a: ");
         coeff.a = scanner.nextDouble();
         while (coeff.a == 0) {
@@ -30,18 +27,13 @@ public class QuadraticEquation {
             coeff.a = scanner.nextDouble();
         }
         
-        // Input coefficient b
         System.out.print("Enter coefficient b: ");
         coeff.b = scanner.nextDouble();
-
-        // Input coefficient c
         System.out.print("Enter coefficient c: ");
         coeff.c = scanner.nextDouble();
-
-        // Calculate discriminant
+        
         double d = coeff.b * coeff.b - 4 * coeff.a * coeff.c;
-
-        // Check for roots based on discriminant
+        
         if (d == 0) {
             double r1 = -coeff.b / (2 * coeff.a);
             System.out.println("Roots are real and equal.");
@@ -49,7 +41,7 @@ public class QuadraticEquation {
         } else if (d > 0) {
             double r1 = (-coeff.b + Math.sqrt(d)) / (2 * coeff.a);
             double r2 = (-coeff.b - Math.sqrt(d)) / (2 * coeff.a);
-            System.out.println("Roots are real and distinct.");
+            System.out.println("Roots are real and unique.");
             System.out.println("Root 1: " + r1);
             System.out.println("Root 2: " + r2);
         } else {
@@ -59,7 +51,6 @@ public class QuadraticEquation {
             System.out.println("Root 1: " + realPart + " + " + imaginaryPart + "i");
             System.out.println("Root 2: " + realPart + " - " + imaginaryPart + "i");
         }
-
         scanner.close();
     }
 }
