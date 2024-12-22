@@ -7,8 +7,8 @@ class Subject {
 
 class PrintInfo {
     static void print() {
-        System.out.println("Name: Kashvi Agarwal");
-        System.out.println("USN: 1BM23CS141");
+        System.out.println("Name: Raghav kaushal");
+        System.out.println("USN: 1BM23CS257");
     }
 }
 
